@@ -1,0 +1,86 @@
+window.addEventListener("load", addListener);
+
+function addListener()
+{
+	document.getElementByID("btnsubmit").addEventListener("click", CheckInfo);
+}
+
+function CheckInfo()
+{
+	var whichnum, msg = "Please enter proper information";
+	
+	whichnum = documentByID("txtmonth").value = "";
+	
+	if(whichnum == "" || (whichnum < 0 || whichnum > 12))
+		{
+			alert(msg);
+			documentByID("txtmonth").value = "";
+			documentByID("txtmonth").focus();
+		}
+	else
+	{
+		WhichMounth(whichnum);
+	}
+}
+
+function WhichMounth(whichvalue)
+{
+	switch(whichvalue)
+	{
+		case "1":
+			alert("Sxqsd")
+			msgdisp = "January";
+			break;
+		case "2":
+			msgdisp = "February";
+			break;
+		case "3":
+			msgdisp = "March";
+			break;
+			case "4":
+				msgdisp = "April";
+				break;
+		default:
+			msgdisp = "Something went wrong...No month";
+			break;
+	}
+	document.getElementById("lbldisplay").textContent = msgdisp;
+}
+
+
+body
+{
+	color:yellow;
+	background-color: green;
+	font-family:Cambria;
+	margin-left: 50px;
+}
+
+input[id = "txtmonth"]
+{
+	width:30px;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Activity - Switch</title>
+		<link rel="stylesheet" type="text/css" href="customize.css" media="screen"></link>
+		<script src="switchprog.js"></script>
+	</head>
+
+	<body>
+		<h1>Month</h1>
+		
+		<p id="firstpart">
+			<label id="lblmonth">Enter a number from 1 – 12:</label>
+			<input type = "text" id="txtmonth"></input><br>
+			<button type="button" id="btnsubmit">Submit</button><br>
+			<label id="lbldisplay"></label>
+		</p>
+		
+	</body>
+</html>
