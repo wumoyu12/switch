@@ -31,35 +31,57 @@ function WhichMounth(whichvalue)
 			alert("Sxqsd")
 			msgdisp = "January";
 			break;
+			
 		case "2":
 			msgdisp = "February";
 			break;
+			
 		case "3":
 			msgdisp = "March";
 			break;
-			case "4":
-				msgdisp = "April";
-				break;
+			
+		case "4":
+			msgdisp = "April";
+			break;
+			
+		case "5":
+			msgdisp = "May";
+			break;
+				
+		case "6":
+			msgdisp = "June";
+			break;
+			
+		case "7":
+			msgdisp = "July";
+			break;
+			
+		case "8":
+			msgdisp = "August";
+			break;
+			
+		case "9":
+			msgdisp = "September"
+		
+		case "10":
+			msgdisp = "October"
+			
+		case "11":
+			msgdisp = "November"
+			
+		case "12":
+			msgdisp = "December"
+		
 		default:
 			msgdisp = "Something went wrong...No month";
 			break;
+			
 	}
+	
 	document.getElementById("lbldisplay").textContent = msgdisp;
+	
 }
 
-
-body
-{
-	color:yellow;
-	background-color: green;
-	font-family:Cambria;
-	margin-left: 50px;
-}
-
-input[id = "txtmonth"]
-{
-	width:30px;
-}
 
 
 
